@@ -8,6 +8,7 @@ import FooterComponent from "./FooterComponent.jsx";
 import LogoutComponent from  "./LogoutComponent.jsx";
 import WelcomeComponent from "./WelcomeComponent.jsx";
 import ErrorComponent from "./ErrorComponent.jsx";
+import TodoComponent from './TodoComponent.jsx';
 class WelcomePage extends Component {
     render() {
         return (
@@ -21,6 +22,7 @@ class WelcomePage extends Component {
                             <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent} />
                             <AuthenticatedRoute path="/listtodo" exact component={ListTodosComponent} />
                             <AuthenticatedRoute path="/logout" component={LogoutComponent} />
+                            <AuthenticatedRoute path="/todo/:id" component={TodoComponent} />
                             <Route component={ErrorComponent} />
                         </Switch>
                         <FooterComponent />
